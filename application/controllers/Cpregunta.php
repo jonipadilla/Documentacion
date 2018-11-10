@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Csocio extends CI_Controller {
+class Cpregunta extends CI_Controller {
 
 	public function _construct()
 	{
@@ -15,23 +15,23 @@ class Csocio extends CI_Controller {
 
 	function cargar_vista($output=null)
 	{
+
 		$this->load->view('header.php');
-		$this->load->view('registrarSocio.php',$output);
+		$this->load->view('registrarPregunta.php',$output);
 	}
 
-	public function registrarSocio(){
+	public function registrarPregunta(){
 		$crud = new grocery_CRUD();
 		
 		$crud->set_theme('flexigrid');
-		$crud->set_table('socio');
-		$crud->set_subject('Socio');
+		$crud->set_table('pregunta');
 
 		$crud->unset_clone();
-		//$crud->unset_export();
+		$crud->unset_export();
 		$crud->unset_print();
-		$crud->unset_delete();
-		
-		
+		//$crud->display_as('idServicio','servicios tipoServicio');
+		//$crud->set_relation('id_Socio', 'socio','{apellido} - {nombre} {dni}');
+		//$crud->set_relation('id_Servicio', 'servicio','tipoServicio');
 		$output = $crud->render();
 		$this->cargar_vista($output);
 

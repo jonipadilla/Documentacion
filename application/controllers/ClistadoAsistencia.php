@@ -31,6 +31,9 @@ class ClistadoAsistencia extends CI_Controller {
 		$crud->unset_export();
 		$crud->unset_print();
 		$crud->unset_add();
+		$crud->unset_delete();
+		$crud->unset_edit();
+		$crud->display_as('id_Socio','socio');
 				
 		$output = $crud->render();
 		$this->cargar_vista($output);

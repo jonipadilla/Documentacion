@@ -24,6 +24,7 @@ class Cdisciplina extends CI_Controller {
 		$crud->set_theme('flexigrid');
 		$crud->set_table('disciplina');
 		$crud->set_subject('Disciplina');
+		$crud->set_relation_n_n('pregunta', 'preguntadisciplina', 'pregunta', 'id_Disciplina', 'id_Pregunta', 'pregunta');
 
 		$crud->unset_clone();
 		$crud->unset_export();

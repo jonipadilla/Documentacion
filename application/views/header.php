@@ -88,6 +88,7 @@
                 <li><a href='<?php echo site_url('cinscripcion/registrarInscripcion')?>'>Inscripcion</a></li>
                 <li><a href='<?php echo site_url('cservicio/registrarServicio')?>'>Servicio</a></li>
                 <li><a href='<?php echo base_url('cdisciplina/registrarDisciplina')?>'>Disciplina</a></li>
+                <li><a href='<?php echo base_url('cpregunta/registrarPregunta')?>'>Pregunta</a></li>
             
                
                 <li><a class="col-xs-12 text-right" href="<?php echo base_url(); ?>Clogin/logout"> Cerrar Sesión</a>
